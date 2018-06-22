@@ -1,0 +1,131 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* wyżej jest reset
+/*###########################################################################*/
+body {
+  background-image: url("../Images/background.jpg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: 0 0;
+  position: relative;
+  font-family: 'Press Start 2P', cursive;
+  animation: animate 150s linear infinite; }
+
+@keyframes animate {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 0 15000px; } }
+
+.mainWidth {
+  width: 1000px;
+  height: 100%; }
+
+.title-wrapper {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding-top: 20px; }
+  .title-wrapper .title {
+    color: white;
+    font-size: 2em; }
+
+.score-wrapper {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  margin-bottom: 0; }
+
+.lifes {
+  display: flex;
+  flex-direction: row; }
+  .lifes .life1 {
+    background-image: url("../Images/life.png");
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center; }
+  .lifes .life2 {
+    background-image: url("../Images/life.png");
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center; }
+  .lifes .life3 {
+    background-image: url("../Images/life.png");
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center; }
+
+.board {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+
+.falcon {
+  background-image: url("../Images/milenium falcon.png");
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 73px;
+  transform: rotate(-90deg) translateY(0);
+  margin-left: 0;
+  animation: moveLeft 1s linear;
+  position: relative; }
+
+.laser {
+  background-image: url("../Images/laser beam.png");
+  width: 32px;
+  height: 32px;
+  transform: rotate(-90deg);
+  background-position: center;
+  background-size: cover;
+  position: absolute; }
